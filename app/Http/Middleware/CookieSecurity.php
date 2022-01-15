@@ -17,7 +17,7 @@ class CookieSecurity
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->cookie('cookie_access') === 'y') {
+        if ($request->cookie('cookie_access') == 1) {
             return $next($request);
         }
 

@@ -19,10 +19,10 @@ class CookieController extends Controller
     {
         $access = $request->cookie('cookie_access');
 
-        if ($access == 'y') {
-            $cookie = cookie('cookie_access', 'n', 3660);
+        if ($access == 1) {
+            $cookie = cookie('cookie_access', 0, 3660);
         } else {
-            $cookie = cookie('cookie_access', 'y', 3660);
+            $cookie = cookie('cookie_access', 1, 3660);
         }
 
         return response()->json([

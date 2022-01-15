@@ -31,7 +31,7 @@
             }).then(response => {
                     response.json()
                         .then(data => {
-                            changeAccessStatus(data.cookie_access === 'y');
+                            changeAccessStatus(data.cookie_access == 1);
                         });
                 });
         }
@@ -43,7 +43,7 @@
                 .then(response => {
                     response.json()
                         .then(data => {
-                            changeAccessStatus(data.cookie_access === 'y')
+                            changeAccessStatus(data.cookie_access == 1)
                         })
                 });
         }

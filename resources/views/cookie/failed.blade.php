@@ -13,18 +13,18 @@
         </div>
 
         <div class="border d-inline-block p-4 rounded">
-            <span>У вас нет доступа, перейдите во вкладку "Update", чтобы получить его.</span>
+            <span>У вас <span class="badge bg-danger" style="font-size: 13px;">нет</span> доступа, перейдите во вкладку "Update", чтобы получить его.</span>
         </div>
     @else
         <h4 class="mb-5 mt-3">Страничка если доступ ограничен.</h4>
 
-        @if(\Illuminate\Support\Facades\Cookie::get('cookie_access') === 'y')
+        @if(\Illuminate\Support\Facades\Cookie::get('cookie_access') == 1)
             <div class="border d-inline-block p-4 rounded">
-                <span>У вас есть доступ, вы перешли на эту страничку при помощи меню.</span>
+                <span>У вас <span class="badge bg-success" style="font-size: 13px;">есть</span> доступ, вы перешли на эту страничку при помощи меню.</span>
             </div>
         @else
             <div class="border d-inline-block p-4 rounded">
-                <span>У вас нет доступа и вы перешли на страничку через меню выше.</span>
+                <span>У вас <span class="badge bg-danger" style="font-size: 13px;">нет</span> доступа и вы перешли на страничку через меню выше.</span>
             </div>
         @endif
     @endif
@@ -35,7 +35,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
-                document.querySelector('div#alert-message').remove();
+                let message = document.querySelector('div#alert-message');
+                if (message) {
+                    message.remove();
+                }
             }, 1500)
         });
     </script>
