@@ -22,7 +22,7 @@ class CookieSecurity
         }
 
         return redirect()->route('cookie.access.failed')->with([
-            'error' => 'Access is denied'
+            'error' => 'Доступ ограничен!'
         ]);
     }
 }
