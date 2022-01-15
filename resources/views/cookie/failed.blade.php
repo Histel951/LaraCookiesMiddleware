@@ -13,18 +13,18 @@
         </div>
 
         <div class="border d-inline-block p-4 rounded">
-            <span>У вас нет доступа, перейдите во вкладку "Update" чтобы получить его.</span>
+            <span>У вас нет доступа, перейдите во вкладку "Update", чтобы получить его.</span>
         </div>
     @else
         <h4 class="mb-5 mt-3">Страничка если доступ ограничен.</h4>
 
         @if(\Illuminate\Support\Facades\Cookie::get('cookie_access') === 'y')
             <div class="border d-inline-block p-4 rounded">
-                <span>У вас есть доступ, вы перешли на эту страничку через меню в хэдере.</span>
+                <span>У вас есть доступ, вы перешли на эту страничку при помощи меню.</span>
             </div>
         @else
             <div class="border d-inline-block p-4 rounded">
-                <span>У вас нет доступа и вы перешли на эту страничку через меню в хэдере.</span>
+                <span>У вас нет доступа и вы перешли на страничку через меню выше.</span>
             </div>
         @endif
     @endif
