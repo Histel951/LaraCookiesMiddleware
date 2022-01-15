@@ -1,5 +1,9 @@
 @extends('layouts.cookie')
 
+@section('title')
+    Главная - что для чего
+@endsection
+
 @section('content')
     <h4 class="mb-5 mt-3">Самый надёжный способ ограничить доступ</h4>
     <div class="border d-inline-block p-4 rounded">

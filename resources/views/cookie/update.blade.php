@@ -1,5 +1,9 @@
 @extends('layouts.cookie')
 
+@section('title')
+    Обновление доступа
+@endsection
+
 @section('content')
     <div style="display: flex; justify-content: center; margin-top: 10%;">
         <div class="form-check p-5 border border-secondary rounded bg-light" style="min-width: 380px;">

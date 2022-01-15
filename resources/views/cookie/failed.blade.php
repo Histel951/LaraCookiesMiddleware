@@ -1,5 +1,13 @@
 @extends('layouts.cookie')
 
+@section('title')
+    @if(\Illuminate\Support\Facades\Cookie::get('cookie_access') == 1)
+        Есть доступ
+    @else
+        Доступ ограничен
+    @endif
+@endsection
+
 @section('content')
     @if(session('error'))
         <h4 class="mb-5 mt-3">Нет Доступа!</h4>
