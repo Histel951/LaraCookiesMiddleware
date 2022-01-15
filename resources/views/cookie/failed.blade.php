@@ -18,9 +18,15 @@
     @else
         <h4 class="mb-5 mt-3">Страничка если доступ ограничен.</h4>
 
-        <div class="border d-inline-block p-4 rounded">
-            <span>У вас есть доступ, вы перешли на эту страничку через меню в хэдере.</span>
-        </div>
+        @if(\Illuminate\Support\Facades\Cookie::get('cookie_access') === 'y')
+            <div class="border d-inline-block p-4 rounded">
+                <span>У вас есть доступ, вы перешли на эту страничку через меню в хэдере.</span>
+            </div>
+        @else
+            <div class="border d-inline-block p-4 rounded">
+                <span>У вас нет доступа и вы перешли на эту страничку через меню в хэдере.</span>
+            </div>
+        @endif
     @endif
 
 @endsection
