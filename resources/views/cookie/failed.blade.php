@@ -13,7 +13,7 @@
         </div>
 
         <div class="border d-inline-block p-4 rounded">
-            <span>У вас <span class="badge bg-danger" style="font-size: 13px;">нет</span> доступа, перейдите во вкладку "Update", чтобы получить его.</span>
+            <span>У вас <span class="badge bg-danger" style="font-size: 13px;">нет</span> доступа, перейдите на страницу "Update", чтобы получить его.</span>
         </div>
     @else
         <h4 class="mb-5 mt-3">Страничка если доступ ограничен.</h4>
@@ -24,7 +24,7 @@
             </div>
         @else
             <div class="border d-inline-block p-4 rounded">
-                <span>У вас <span class="badge bg-danger" style="font-size: 13px;">нет</span> доступа и вы перешли на страничку через меню выше.</span>
+                <span>У вас <span class="badge bg-danger" style="font-size: 13px;">нет</span> доступа, получите его на странице "Update".</span>
             </div>
         @endif
     @endif
