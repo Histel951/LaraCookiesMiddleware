@@ -30,8 +30,11 @@
             let checkbox = document.querySelector('input#access-checkbox');
             checkbox.disabled = true;
 
+            let data = new FormData();
+            data.append('_method', 'PUT');
             await fetch('/api/cookie/access/update', {
-                method: 'POST'
+                method: 'POST',
+                body: data,
             }).then(response => {
                     response.json()
                         .then(data => {

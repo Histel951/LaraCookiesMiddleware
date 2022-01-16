@@ -22,6 +22,6 @@ Route::prefix('/cookie/access')->name('cookie.access.')->group(function () {
     Route::get('/', [\App\Http\Controllers\Api\CookieController::class, 'index'])
         ->name('index');
 
-    Route::post('/update', [\App\Http\Controllers\Api\CookieController::class, 'update'])
+    Route::put('/update', [\App\Http\Controllers\Api\CookieController::class, 'update'])
         ->name('update');
 });
